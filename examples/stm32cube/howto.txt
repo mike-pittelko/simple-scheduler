@@ -1,0 +1,5 @@
+CAUTION: As implemented in this example, all the CPU cycles consumed by tasks are taken during the sytsem tick interrupt handler. For the purposes of demonstration, this is fine, however, if the tasks are doing anything significant (printing text to the serial port is signficant!) it would be better to enable a routine in the main loop to do so, based on the task trigger instead of calling directly.  I'll add an example of how to do that at some point.  You've been warned - if you execute much in the task triggers, you WILL have problems hard to diagnose.
+
+In this example: 
+
+Note that the task scheduler is called from the SysTick interrupt handler (stm32F1xx_it.c) and that there are two tasks defined, one called every 256ms, and one called every 1s, defined in main.h/main.c, referenced via the task-scheduler.h file.
