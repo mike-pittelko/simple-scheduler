@@ -43,22 +43,22 @@
  *
  *
 
-void Task2ms(void) { };			// Called every 2ms
-void Task4ms(void) { };			// Called every 4ms
-void Task8ms(void) { };			// Called every 8ms
-void Task16ms(void) { };		// Called every 16ms
-void Task32ms(void) { };		// Called every 32ms
-void Task64ms(void) { };		// Called every 64ms
-void Task128ms(void) { };		// Called every 128ms
-void Task256ms(void) { };		// Called every 256ms
-void Task512ms(void) { };		// Called every 512ms
-void Task1024ms(void) { };		// Called every 1.024s
-void Task2048ms(void) { };		// Called every 2.048s
-void Task4096ms(void) { };		// Called every 4.096s
-void Task8192ms(void) { };		// Called every 8.192s
-void Task16384ms(void) { };		// Called every 16.384s
-void Task32768ms(void) { };		// Called every 32.768s
-void Task65536ms(void) { };		// Called every 65.536s, About 1 minute
+void Task2ms(void) { };		// Called every 2ms
+void Task4ms(void) { };		// Called every 4ms
+void Task8ms(void) { };		// Called every 8ms
+void Task16ms(void) { };	// Called every 16ms
+void Task32ms(void) { };	// Called every 32ms
+void Task64ms(void) { };	// Called every 64ms
+void Task128ms(void) { };	// Called every 128ms
+void Task256ms(void) { };	// Called every 256ms
+void Task512ms(void) { };	// Called every 512ms
+void Task1024ms(void) { };	// Called every 1.024s
+void Task2048ms(void) { };	// Called every 2.048s
+void Task4096ms(void) { };	// Called every 4.096s
+void Task8192ms(void) { };	// Called every 8.192s
+void Task16384ms(void) { };	// Called every 16.384s
+void Task32768ms(void) { };	// Called every 32.768s
+void Task65536ms(void) { };	// Called every 65.536s, About 1 minute
 void Task131072ms(void) { };	// Called every 131.072s, About 2 minutes
 void Task262144ms(void) { };	// Called every 262.144s, About 4 minutes
 void Task528288ms(void) { };	// Called every 524.288s, About 9 minutes
@@ -77,16 +77,16 @@ void Task135241728ms(void) { };	// Called every 135241.728s, About 2254 minutes,
 // For each definition of a task, install your function pointer
 // #define EXAMPLE_TASK_DEFINE (Task2ms) // call void Task2ms(void); every 2ms
 // #define EXAMPLE_TASK_NOT_USED (0)   // Unused task slots MUST BE ZERO
-#define TASK_2MS 		 (0)
-#define TASK_4MS 		 (0)
-#define TASK_8MS 		 (0)
-#define TASK_16MS 		 (0)
-#define TASK_32MS 		 (0)
-#define TASK_64MS 		 (0)
-#define TASK_128MS 		 (0)
-#define TASK_2562MS 	 (Task256ms)
-#define TASK_512MS 		 (0)
-#define TASK_1024MS 	 (Task1024ms)
+#define TASK_2MS 	 (0)
+#define TASK_4MS 	 (0)
+#define TASK_8MS 	 (0)
+#define TASK_16MS 	 (0)
+#define TASK_32MS 	 (0)
+#define TASK_64MS 	 (0)
+#define TASK_128MS 	 (0)
+#define TASK_2562MS 	 (0)
+#define TASK_512MS 	 (0)
+#define TASK_1024MS 	 (0)
 #define TASK_2048MS 	 (0)
 #define TASK_4096MS 	 (0)
 #define TASK_8192MS 	 (0)
