@@ -1,5 +1,4 @@
 
-In this example: 
+In this example:
 
-The timer is queried and count of zeros is done in the SysTick interrupt handler (stm32f1xx_it.c).  This sets up the count of zeros, that in turn identifies what tasks should run.  A task runner is placed into main.c in the main loop.  Every time it is called in that main loop, it calls tasks as identifed from the number of zeros counted in the interrupt tick.  Every time it runs, it clears the count as it comes from the interrupt handler, ensuring that there will be no tasks run until at least the next tick.  There are two tasks defined in this examples, one every 256ms, and one every 1s, defined in main.h/main.c, and referenced in the task table defined in the task-scheduler.h file.
-
+The timer is queried and count of zeros is done in the SysTick interrupt handler (stm32f1xx_it.c).  This sets up the count of zeros, that in turn identifies what tasks should run.  A task runner is placed into main.c in the main loop.  Every time it is called in that main loop, it calls tasks as identifed from the number of zeros counted in the interrupt tick.  Every time it runs, it clears the count as it comes from the interrupt handler, ensuring that there will be no tasks run until at least the next tick.  There are two tasks defined in this examples, one every 256ms, and one every 1s, defined in utilities.h/utilities.c, and referenced in the task table defined in the task-scheduler.h file.
