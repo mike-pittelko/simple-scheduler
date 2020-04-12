@@ -18,6 +18,6 @@ The example code demonstrates doing this to toggle the heartbeat led on a blue-p
 # CAUTION - Simpler Scheduler:
 This is a very simple method to make things occur on a synchronized time base that's generally useful for UI purposes, and great for keeping things like sets of blinking LED's in time with each other.  It's also great for kicking off background tasks that need to happen.  It's NOT great for long running executions that would need to occur in the calling context of the "task" (which in this case executes in the context of the system tick interrupt) - in those cases, it's much better to use the "task" to set a flag/semaphore to enable a background task via your main loop.  I'll add an example of this at some point.
 
-Slighly Less Simple Scheduler:
+# Slighly Less Simple Scheduler:
 This is a somehwat more complex implementation that runs tasks in the main code loop.  Using this is a much safer and general purpose method of using the same basic scheduling algorithm.  It's not complicated, but has a little finesse.
 
