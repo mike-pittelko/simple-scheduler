@@ -7,18 +7,18 @@
 
   Copyright (c) 2020 Mike Pittelko
 
-  Grbl is free software: you can redistribute it and/or modify
+  This is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
   the Free Software Foundation, either version 3 of the License, or
   (at your option) any later version.
 
-  Grbl is distributed in the hope that it will be useful,
+  This is distributed in the hope that it will be useful,
   but WITHOUT ANY WARRANTY; without even the implied warranty of
   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
   GNU General Public License for more details.
 
   You should have received a copy of the GNU General Public License
-  along with Grbl.  If not, see <http://www.gnu.org/licenses/>.
+  along with this software.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 
@@ -81,7 +81,7 @@ void (*Tasks[]) (void) = {
 #define TASK_MASK 0xF0000000
 
 
-uint32_t stm32_atomic_swap(uint32_t *dest, uint32_t new_value)
+uint32_t atomic_swap(uint32_t *dest, uint32_t new_value)
 {
   uint32_t old_value;
   do
@@ -112,7 +112,7 @@ uint32_t MainLoopTaskProcessor(void)
 	uint32_t CountOfZeros = 0;
 	uint32_t TasksThatRan = 0;
 
-	CountOfZeros = stm32_atomic_swap(&Scheduler_CountOfZeros,0);  // By clearing the count, if function is called
+	CountOfZeros = atomic_swap(&Scheduler_CountOfZeros,0);  // By clearing the count, if function is called
 															// before we get the next tick, will keep from
 															// running tasks again.
 
