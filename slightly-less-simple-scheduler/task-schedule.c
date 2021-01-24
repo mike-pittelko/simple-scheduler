@@ -47,13 +47,13 @@ void (*Tasks[]) (void) = {
 		0,			       // Never called
 		TASK_2MS,          // Bit 1
 		TASK_4MS,          // Bit 2
-		TASK_8MS, 	       // Bit 3
+		TASK_8MS, 	   // Bit 3
 		TASK_16MS,         // Bit 4
 		TASK_32MS,         // Bit 5
 		TASK_64MS,         // Bit 6
 		TASK_128MS,        // Bit 7
 		TASK_2562MS,	   // Bit 8
-		TASK_512MS,	       // Bit 9
+		TASK_512MS,	   // Bit 9
 		TASK_1024MS,	   // Bit 10
 		TASK_2048MS,	   // Bit 11
 		TASK_4096MS,	   // Bit 12
